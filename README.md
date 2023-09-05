@@ -1,66 +1,33 @@
-## Foundry
+# Random Raffle Smart Contract
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This project implements a blockchain-based raffle smart contract using Solidity and the Foundry development toolkit. 
 
-Foundry consists of:
+The smart contract is deployed and usable on the Sepolia testnet at this address [0xa6afD43A1356aBE04acce36AD20853e99bf7453a](https://sepolia.etherscan.io/address/0xa6afD43A1356aBE04acce36AD20853e99bf7453a#code).
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Overview
 
-## Documentation
+This smart contract allows users to enter a raffle by sending ETH. At the end of the raffle period, a random winner is selected using Chainlink VRF to generate a random number. The winner receives the entire pot of ETH collected from raffle entries.
 
-https://book.getfoundry.sh/
+## Key Features
 
-## Usage
+- Written in **Solidity** - The leading language for Ethereum smart contract development
 
-### Build
+- Developed using **Foundry** - A leading toolkit for Ethereum application development and testing
 
-```shell
-$ forge build
-```
+- Uses **Chainlink VRF** - To generate provably fair and tamper-proof random numbers 
 
-### Test
+- Includes **automated testing** - Tests for the smart contract using Foundry's testing framework
 
-```shell
-$ forge test
-```
 
-### Format
+## Getting Started
 
-```shell
-$ forge fmt
-```
+0. Get help - `make help`
+1. Install dependencies - `make install`
+2. Run tests - `make test`
+3. Deploy contract - `make deploy`
 
-### Gas Snapshots
+## Resources
 
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+- [Foundry](https://github.com/foundry-rs/foundry)
+- [Chainlink](https://docs.chain.link/)
+- [Solidity](https://docs.soliditylang.org/)
